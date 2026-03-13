@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamza Masmoudi — Machine Learning First, Questions Later</title>
+  <meta name="description" content="Portfolio of Hamza Masmoudi — machine learning engineer shipping AI systems in Python, Rust, and whatever compiles.">
+  <meta name="author" content="Hamza Masmoudi">
+  <meta property="og:title" content="Hamza Masmoudi — Machine Learning First, Questions Later">
+  <meta property="og:description" content="Portfolio showcasing AI, machine learning, and software engineering projects.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="waveCanvas"></canvas>
+
+<div class="page-wrapper">
+
+  <!-- ═══════════ NAVIGATION ═══════════ -->
+  <nav class="navbar" id="top">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">hamza.dev</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="https://github.com/hamza2masmoudi" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/hamza-masmoudi-1a77b6195/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="accent">Machine Learning</span> First, Questions Later
+      </h1>
+      <p class="hero-bio">
+        I ship AI. Python, Rust, whatever compiles.
+      </p>
+      <div class="hero-links">
+        <a href="https://github.com/hamza2masmoudi" class="hero-link primary" target="_blank" rel="noopener">
+          GitHub @hamza2masmoudi
+        </a>
+        <a href="https://www.linkedin.com/in/hamza-masmoudi-1a77b6195/" class="hero-link" target="_blank" rel="noopener">
+          LinkedIn
+        </a>
+        <a href="mailto:hamza.masmoudi.ai@gmail.com" class="hero-link">
+          hamza.masmoudi.ai@gmail.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FEATURED PROJECTS ═══════════ -->
+  <hr class="section-divider">
+  <section id="projects">
+    <div class="container">
+      <p class="section-label reveal">Highlighted Work</p>
+      <h2 class="section-title reveal">Featured Projects</h2>
+
+      <div class="projects-grid">
+
+        <!-- BALE -->
+        <article class="project-card reveal">
+          <div class="project-header">
+            <h3 class="project-name">BALE</h3>
+            <span class="project-badge open">open source</span>
+          </div>
+          <p class="project-tagline">Binary Adjudication & Litigation Engine</p>
+          <p class="project-desc">
+            AI-powered legal contract analysis platform with neuro-symbolic reasoning.
+            Analyzes contracts for litigation risk, power asymmetry, and missing clauses
+            using a hybrid neural + symbolic pipeline. V10 Contract Intelligence Engine
+            with fine-tuning presets and Docker deployment.
+          </p>
+          <div class="project-tags">
+            <span class="tag" data-cat="lang">python</span>
+            <span class="tag" data-cat="fw">fastapi</span>
+            <span class="tag" data-cat="infra">docker</span>
+            <span class="tag" data-cat="ai">nlp</span>
+            <span class="tag" data-cat="ai">neuro-symbolic</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/hamza2masmoudi/BALE-project" class="project-link" target="_blank" rel="noopener">View Source</a>
+          </div>
+        </article>
+
+        <!-- OxidizeML -->
+        <article class="project-card reveal">
+          <div class="project-header">
+            <h3 class="project-name">OxidizeML</h3>
+            <span class="project-badge open">open source</span>
+          </div>
+          <p class="project-tagline">ML framework from scratch in Rust</p>
+          <p class="project-desc">
+            A complete machine learning framework written from scratch in Rust — no Python runtime,
+            no C++ bindings, no libtorch. Includes neural networks, classical ML algorithms,
+            computation graph engine, WASM compilation, and interactive browser benchmarks.
+          </p>
+          <div class="project-tags">
+            <span class="tag" data-cat="lang">rust</span>
+            <span class="tag" data-cat="infra">wasm</span>
+            <span class="tag" data-cat="ai">ml</span>
+            <span class="tag" data-cat="ai">neural networks</span>
+            <span class="tag" data-cat="fw">from scratch</span>
+          </div>
+          <div class="project-links">
+            <a href="https://hamza2masmoudi.github.io/OxidizeML/" class="project-link demo" target="_blank" rel="noopener">Live Demo</a>
+            <a href="https://github.com/hamza2masmoudi/OxidizeML" class="project-link" target="_blank" rel="noopener">View Source</a>
+          </div>
+        </article>
+
+        <!-- Social Media Pipeline -->
+        <article class="project-card reveal">
+          <div class="project-header">
+            <h3 class="project-name">Social Media Pipeline</h3>
+            <span class="project-badge open">open source</span>
+          </div>
+          <p class="project-tagline">Reddit trend analytics engine</p>
+          <p class="project-desc">
+            Data pipeline for analyzing social media trends from public Reddit posts.
+            Automated ETL with ingestion, transformation, and analytics layers
+            for real-time trend detection and insight generation.
+          </p>
+          <div class="project-tags">
+            <span class="tag" data-cat="lang">python</span>
+            <span class="tag" data-cat="data">data engineering</span>
+            <span class="tag" data-cat="data">etl</span>
+            <span class="tag" data-cat="data">analytics</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/hamza2masmoudi/social-media-pipeline" class="project-link" target="_blank" rel="noopener">View Source</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════ CONTACT / FOOTER ═══════════ -->
+  <footer class="footer" id="contact">
+    <p class="footer-bio">Hamza Masmoudi · Machine Learning First, Questions Later</p>
+    <div class="footer-links">
+      <a href="mailto:hamza.masmoudi.ai@gmail.com" class="email-link">hamza.masmoudi.ai@gmail.com</a>
+      <a href="https://github.com/hamza2masmoudi" target="_blank" rel="noopener">GitHub: @hamza2masmoudi</a>
+      <a href="https://www.linkedin.com/in/hamza-masmoudi-1a77b6195/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <a href="#top" class="back-top">↑ Back to top</a>
+  </footer>
+
+</div><!-- /.page-wrapper -->
+
+<script src="script.js"></script>
+</body>
+</html>
