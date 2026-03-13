@@ -195,12 +195,23 @@ section { padding: 6rem 2rem; }
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   padding-top: 56px;
+  overflow: hidden;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
 }
 
 .hero-content {
-  max-width: 760px;
+  flex: 1 1 500px;
+  animation: slideUp .8s var(--ease-out-expo) both;
 }
 
 .hero-title {
@@ -221,22 +232,39 @@ section { padding: 6rem 2rem; }
   line-height: 1.8;
   margin-bottom: 2rem;
   max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero-cta {
-  font-family: var(--font-mono);
-  font-size: .92rem;
-  color: var(--text-muted);
-  margin-bottom: 2rem;
 }
 
 .hero-links {
   display: flex;
   gap: 1.2rem;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.hero-ascii {
+  flex: 0 0 auto;
+  animation: slideUp .8s var(--ease-out-expo) .2s both;
+  background: rgba(10, 26, 31, 0.4);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#ascii-donut {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 11px;
+  letter-spacing: 0;
+  color: var(--cyan);
+  margin: 0;
+  white-space: pre;
+  text-shadow: 0 0 5px rgba(0, 212, 170, 0.5);
 }
 
 .hero-link {
@@ -585,6 +613,31 @@ section { padding: 6rem 2rem; }
   .hamburger { display: flex; }
 
   section { padding: 4rem 1.2rem; }
+
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-bio {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-links {
+    justify-content: center;
+  }
+  .hero-ascii {
+    max-width: 100%;
+    padding: 1rem;
+    overflow: hidden;
+  }
+  #ascii-donut {
+    font-size: 8px; /* scale down on mobile */
+    line-height: 8px;
+  }
 
   .projects-grid {
     grid-template-columns: 1fr;
